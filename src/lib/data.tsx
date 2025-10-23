@@ -62,6 +62,14 @@ export const projects: Project[] = [
     liveUrl: "https://www.facsfood.com.ng/",
     githubUrl: "#",
   },
+  {
+    title: "Non Profit Platform",
+    description: "A webapp for an NGO based in Nigeria",
+    image: "project-5",
+    tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
+    liveUrl: "https://lodestarcare.vercel.app/",
+    githubUrl: "#",
+  },
 ];
 
 export const socialLinks = [
