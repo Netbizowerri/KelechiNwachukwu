@@ -54,6 +54,14 @@ export const projects: Project[] = [
     liveUrl: "https://northerncrest.vercel.app/",
     githubUrl: "#",
   },
+  {
+    title: "Food Delivery Platform",
+    description: "A full stack webapp for food delivery",
+    image: "project-4",
+    tags: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Supabase"],
+    liveUrl: "https://www.facsfood.com.ng/",
+    githubUrl: "#",
+  },
 ];
 
 export const socialLinks = [
