@@ -27,10 +27,14 @@ export function Hero() {
             </div>
             <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
               <Button asChild size="lg">
-                <a href="/cv.pdf" download>
+                <Link
+                  href="https://jumpshare.com/s/ozxUvKrPV2XQYHynWZrM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Download className="mr-2" />
                   Download CV
-                </a>
+                </Link>
               </Button>
               <div className="flex items-center gap-2 justify-center lg:justify-start">
                 {socialLinks.map((link) => (
@@ -56,7 +60,7 @@ export function Hero() {
           <div className="flex justify-center items-center">
             {avatar && (
               <Image
-                src="https://i.ibb.co/Z1BwqDgH/Kaycee-Nwachukwu.jpg"
+                src="https://i.ibb.co/Z1BwqgH/Kaycee-Nwachukwu.jpg"
                 alt={avatar.description}
                 width={400}
                 height={400}
