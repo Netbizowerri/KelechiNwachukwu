@@ -32,29 +32,10 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
   {
     title: "E-commerce Platform",
-    description:
-      "A full-stack e-commerce website with features like product browsing, cart management, and a checkout process, built with the MERN stack.",
+    description: "A full stack e-commerce website for a medical equipment company",
     image: "project-1",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Social Media App",
-    description:
-      "A responsive social media application where users can post updates, follow other users, and engage with content. Built with Next.js and Firebase.",
-    image: "project-2",
-    tags: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Task Manager",
-    description:
-      "A productivity tool for managing tasks and projects. Features include drag-and-drop functionality, due dates, and collaboration.",
-    image: "project-3",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    liveUrl: "#",
+    tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
+    liveUrl: "https://www.nextoriahealth.com/",
     githubUrl: "#",
   },
 ];
