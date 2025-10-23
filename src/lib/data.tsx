@@ -38,6 +38,14 @@ export const projects: Project[] = [
     liveUrl: "https://www.nextoriahealth.com/",
     githubUrl: "#",
   },
+  {
+    title: "Loans & Investment Platform",
+    description: "A full stack webapp for loans and investments.",
+    image: "project-2",
+    tags: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
+    liveUrl: "https://www.iprofitservices.com.ng/",
+    githubUrl: "#",
+  },
 ];
 
 export const socialLinks = [

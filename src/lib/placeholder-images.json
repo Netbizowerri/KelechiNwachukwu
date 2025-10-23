@@ -11,6 +11,12 @@
       "description": "A screenshot of the e-commerce website Nextoria Health.",
       "imageUrl": "https://i.ibb.co/kgJPf2Nh/Screenshot-2025-10-23-130147.png",
       "imageHint": "ecommerce website"
+    },
+    {
+      "id": "project-2",
+      "description": "A screenshot of the loans and investment platform iProfitServices.",
+      "imageUrl": "https://i.ibb.co/nqMBYN3K/Screenshot-2025-10-23-131311.png",
+      "imageHint": "finance webapp"
     }
   ]
 }
