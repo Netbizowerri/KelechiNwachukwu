@@ -1,12 +1,22 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/lib/data.tsx";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Download } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function Hero() {
-  const avatar = PlaceHolderImages.find((img) => img.id === "avatar");
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const avatar = PlaceHolderImages.find((img) => img.id === "avatar");
+    if (avatar) {
+      setAvatarUrl(avatar.imageUrl);
+    }
+  }, []);
 
   return (
     <section id="home" className="w-full py-24 md:py-32 lg:py-40">
@@ -58,14 +68,14 @@ export function Hero() {
             </div>
           </div>
           <div className="flex justify-center items-center">
-            {avatar && (
+            {avatarUrl && (
               <Image
-                src="https://i.ibb.co/Z1BwqgH/Kaycee-Nwachukwu.jpg"
-                alt={avatar.description}
+                src={avatarUrl}
+                alt="A portrait of Kelechi Nwachukwu."
                 width={400}
                 height={400}
                 className="rounded-full object-cover border-4 border-primary shadow-lg"
-                data-ai-hint={avatar.imageHint}
+                data-ai-hint="person portrait"
                 priority
               />
             )}
