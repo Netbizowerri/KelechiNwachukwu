@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 import { Icons } from "@/components/icons";
 import type { ReactNode } from "react";
 
@@ -60,17 +60,22 @@ export const projects: Project[] = [
 export const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com",
+    url: "https://github.com/Netbizowerri",
     icon: <Github className="h-5 w-5" />,
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/netbizowerri/",
     icon: <Linkedin className="h-5 w-5" />,
   },
   {
-    name: "Twitter",
-    url: "https://twitter.com",
+    name: "X",
+    url: "https://x.com/netbizowerri",
     icon: <Twitter className="h-5 w-5" />,
+  },
+  {
+    name: "Facebook",
+    url: "https://web.facebook.com/netbizowerri",
+    icon: <Facebook className="h-5 w-5" />,
   },
 ];
