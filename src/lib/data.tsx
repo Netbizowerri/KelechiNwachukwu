@@ -46,6 +46,14 @@ export const projects: Project[] = [
     liveUrl: "https://www.iprofitservices.com.ng/",
     githubUrl: "#",
   },
+  {
+    title: "Real Estate Platform",
+    description: "A full stack webapp for property listings",
+    image: "project-3",
+    tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
+    liveUrl: "https://northerncrest.vercel.app/",
+    githubUrl: "#",
+  },
 ];
 
 export const socialLinks = [
