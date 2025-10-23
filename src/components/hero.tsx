@@ -15,7 +15,7 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Pranshu Khanna
+                Kelechi Nwachukwu
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 A Full Stack Developer passionate about creating modern and

@@ -32,7 +32,7 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl">
           <Gem className="h-6 w-6 text-primary" />
-          <span>PK</span>
+          <span>Kelechi Nwachukwu</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
@@ -57,7 +57,7 @@ export function Header() {
               <div className="grid gap-4 p-4">
                  <Link href="/" className="flex items-center gap-2 font-bold text-xl mb-4">
                     <Gem className="h-6 w-6 text-primary" />
-                    <span>PK</span>
+                    <span>Kelechi Nwachukwu</span>
                 </Link>
                 {navLinks.map((link) => (
                     <SheetClose asChild key={link.href}>
