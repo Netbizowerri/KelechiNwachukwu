@@ -71,10 +71,10 @@ export function Contact() {
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-xl space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Contact Me
+            Let's Connect
           </h2>
           <p className="text-muted-foreground">
-            Have a question or want to work together? Fill out the form below.
+            Looking for your company's next remote developer? I am just a chat away. Drop me a message below.
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-xl">

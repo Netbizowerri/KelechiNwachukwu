@@ -9,6 +9,7 @@ import { Menu, Gem } from "lucide-react";
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
+  { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
 
