@@ -26,6 +26,7 @@ export const skills: Skill[] = [
   { name: "Figma", icon: <Icons.Figma /> },
   { name: "Tailwind CSS", icon: <Icons.TailwindCSS /> },
   { name: "Firebase", icon: <Icons.Firebase /> },
+  { name: "Git", icon: <Icons.Git /> },
 ];
 
 export const projects: Project[] = [
@@ -80,3 +81,4 @@ export const socialLinks = [
     icon: <Facebook className="h-5 w-5" />,
   },
 ];
+    
