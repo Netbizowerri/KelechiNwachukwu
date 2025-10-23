@@ -23,6 +23,7 @@ import React from "react";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email." }),
+  phone: z.string().optional(),
   message: z
     .string()
     .min(10, { message: "Message must be at least 10 characters." }),
@@ -35,6 +36,7 @@ export function Contact() {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       message: "",
     },
   });
@@ -45,7 +47,7 @@ export function Contact() {
     setIsSubmitting(true);
     const formData = new FormData();
     Object.entries(values).forEach(([key, value]) => {
-      formData.append(key, value);
+      formData.append(key, value || "");
     });
     
     const result = await submitContactForm(formData);
@@ -109,6 +111,19 @@ export function Contact() {
                         <FormLabel>Email</FormLabel>
                         <FormControl>
                           <Input placeholder="your.email@example.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Phone Number (Optional)</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your phone number" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
