@@ -17,6 +17,8 @@ export type Project = {
 };
 
 export const skills: Skill[] = [
+  { name: "HTML", icon: <Icons.HTML /> },
+  { name: "CSS", icon: <Icons.CSS /> },
   { name: "React", icon: <Icons.React /> },
   { name: "Next.js", icon: <Icons.NextJS /> },
   { name: "TypeScript", icon: <Icons.TypeScript /> },
