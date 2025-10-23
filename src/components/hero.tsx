@@ -11,12 +11,15 @@ export function Hero() {
   return (
     <section id="home" className="w-full py-24 md:py-32 lg:py-40">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
+        <div className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
+            <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                 Kelechi Nwachukwu
               </h1>
+              <h2 className="text-2xl font-semibold tracking-tight text-primary sm:text-3xl md:text-4xl">
+                Full Stack Developer & Trainer
+              </h2>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 A Full Stack Developer passionate about creating modern and
                 responsive web applications.
@@ -53,10 +56,10 @@ export function Hero() {
           <div className="flex justify-center items-center">
             {avatar && (
               <Image
-                src="https://i.ibb.co/Z1BwqgH/Kaycee-Nwachukwu.jpg"
+                src="https://i.ibb.co/Z1BwqDgH/Kaycee-Nwachukwu.jpg"
                 alt={avatar.description}
-                width={450}
-                height={450}
+                width={400}
+                height={400}
                 className="rounded-full object-cover border-4 border-primary shadow-lg"
                 data-ai-hint={avatar.imageHint}
                 priority
