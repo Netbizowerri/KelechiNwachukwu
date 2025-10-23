@@ -12,7 +12,7 @@ export function Hero() {
     <section id="home" className="w-full py-24 md:py-32 lg:py-40">
       <div className="container px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
-          <div className="flex flex-col justify-center space-y-4">
+          <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                 Kelechi Nwachukwu
@@ -20,19 +20,19 @@ export function Hero() {
               <h2 className="text-2xl font-semibold tracking-tight text-primary sm:text-3xl md:text-4xl">
                 Full Stack Developer & Trainer
               </h2>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl">
+              <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
                 A Full Stack Developer passionate about creating modern and
                 responsive web applications.
               </p>
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
               <Button asChild size="lg">
                 <a href="/cv.pdf" download>
                   <Download className="mr-2" />
                   Download CV
                 </a>
               </Button>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
                 {socialLinks.map((link) => (
                   <Button
                     key={link.name}
