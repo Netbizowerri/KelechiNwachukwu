@@ -8,7 +8,7 @@ export function Footer() {
         <footer className="w-full bg-primary text-primary-foreground">
             <div className="container mx-auto px-4 md:px-6 py-8 flex items-center justify-center">
                 <p className="text-sm">
-                    &copy; 2025 Kelechi Nwachukwu. All rights reserved.
+                    &copy; {year} Kelechi Nwachukwu. All rights reserved.
                 </p>
             </div>
         </footer>
