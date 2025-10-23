@@ -21,8 +21,9 @@ export const skills: Skill[] = [
   { name: "Next.js", icon: <Icons.NextJS /> },
   { name: "TypeScript", icon: <Icons.TypeScript /> },
   { name: "Node.js", icon: <Icons.NodeJS /> },
-  { name: "Express", icon: <Icons.Express /> },
-  { name: "MongoDB", icon: <Icons.MongoDB /> },
+  { name: "JavaScript", icon: <Icons.JavaScript /> },
+  { name: "WordPress", icon: <Icons.WordPress /> },
+  { name: "Figma", icon: <Icons.Figma /> },
   { name: "Tailwind CSS", icon: <Icons.TailwindCSS /> },
   { name: "Firebase", icon: <Icons.Firebase /> },
 ];
