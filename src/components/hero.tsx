@@ -53,10 +53,10 @@ export function Hero() {
           <div className="flex justify-center items-center">
             {avatar && (
               <Image
-                src={avatar.imageUrl}
+                src="https://i.ibb.co/Z1BwqDgH/Kaycee-Nwachukwu.jpg"
                 alt={avatar.description}
-                width={250}
-                height={250}
+                width={300}
+                height={300}
                 className="rounded-full object-cover border-4 border-primary shadow-lg"
                 data-ai-hint={avatar.imageHint}
                 priority
