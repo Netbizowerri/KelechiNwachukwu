@@ -35,6 +35,12 @@
       "description": "A screenshot of the non-profit platform Lodestar Care.",
       "imageUrl": "https://i.ibb.co/twMDF6hr/Screenshot-2025-10-23-132748.png",
       "imageHint": "non-profit website"
+    },
+    {
+      "id": "project-6",
+      "description": "A screenshot of the multi-service platform Quanxicuzd.",
+      "imageUrl": "https://i.ibb.co/6R0HM08L/Screenshot-2025-10-23-133249.png",
+      "imageHint": "business website"
     }
   ]
 }

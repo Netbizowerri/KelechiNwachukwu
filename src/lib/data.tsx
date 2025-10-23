@@ -70,6 +70,14 @@ export const projects: Project[] = [
     liveUrl: "https://lodestarcare.vercel.app/",
     githubUrl: "#",
   },
+  {
+    title: "Multi-Services Platform",
+    description: "A webapp for a multi-service business",
+    image: "project-6",
+    tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
+    liveUrl: "https://www.quanxicuzd.com.ng/",
+    githubUrl: "#",
+  },
 ];
 
 export const socialLinks = [
