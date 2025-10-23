@@ -22,11 +22,32 @@ export async function submitContactForm(formData: FormData) {
     };
   }
 
-  // In a real application, you would send an email or save to a database here.
-  console.log("Form submitted successfully:", parsed.data);
+  try {
+    const response = await fetch("https://formspree.io/f/movkogoe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(parsed.data),
+    });
 
-  return {
-    success: true,
-    message: "Thank you for your message! I'll get back to you soon.",
-  };
+    if (response.ok) {
+      return {
+        success: true,
+        message: "Thank you for your message! I'll get back to you soon.",
+      };
+    } else {
+      const errorData = await response.json();
+      return {
+        success: false,
+        message: errorData.error || "Something went wrong. Please try again.",
+      };
+    }
+  } catch (error) {
+    return {
+      success: false,
+      message: "There was a problem submitting the form. Please check your connection.",
+    };
+  }
 }
