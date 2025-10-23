@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "avatar",
+      "description": "A portrait of a person.",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjExMjcwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "project-1",
+      "description": "Abstract representation of an e-commerce project.",
+      "imageUrl": "https://images.unsplash.com/photo-1671087478128-a4ea2e91473e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21tZXJjZSUyMGFic3RyYWN0fGVufDB8fHx8MTc2MTIxNTgyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "commerce abstract"
+    },
+    {
+      "id": "project-2",
+      "description": "Abstract representation of a social media project.",
+      "imageUrl": "https://images.unsplash.com/photo-1611926653458-09294b3142bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb2NpYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc2MTIxNTgyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "social network"
+    },
+    {
+      "id": "project-3",
+      "description": "Abstract representation of a task management project.",
+      "imageUrl": "https://images.unsplash.com/photo-1734776579291-28733b59dc54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9kdWN0aXZpdHklMjBhYnN0cmFjdHxlbnwwfHx8fDE3NjEyMTU4MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "productivity abstract"
+    }
+  ]
 }
