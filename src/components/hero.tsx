@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/lib/data.tsx";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Download } from "lucide-react";
+import { Eye } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Hero() {
@@ -42,8 +42,8 @@ export function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Download className="mr-2" />
-                  Download CV
+                  <Eye className="mr-2" />
+                  VIEW CV
                 </Link>
               </Button>
               <div className="flex items-center gap-2 justify-center lg:justify-start">
