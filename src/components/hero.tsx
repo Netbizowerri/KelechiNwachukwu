@@ -38,7 +38,7 @@ export function Hero() {
             <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
               <Button asChild size="lg">
                 <Link
-                  href="https://jumpshare.com/s/ozxUvKrPV2XQYHynWZrM"
+                  href="https://www.canva.com/design/DAG2nS19xtw/apftAeIRonR5dlBtAvnhyQ/view?utm_content=DAG2nS19xtw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9813edeeec"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -70,7 +70,7 @@ export function Hero() {
           <div className="flex justify-center items-center">
             {avatarUrl && (
               <Image
-                src="https://i.ibb.co/Z1BwqDgH/Kaycee-Nwachukwu.jpg"
+                src={avatarUrl}
                 alt="A portrait of Kelechi Nwachukwu."
                 width={400}
                 height={400}
