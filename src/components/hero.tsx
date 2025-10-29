@@ -70,10 +70,10 @@ export function Hero() {
           <div className="flex justify-center items-center">
             {avatarUrl && (
               <Image
-                src={avatarUrl}
+                src="https://i.ibb.co/bMxpHrHS/Kaycee-Nwachukwu.jpg"
                 alt="A portrait of Kelechi Nwachukwu."
-                width={400}
-                height={400}
+                width={350}
+                height={350}
                 className="rounded-full object-cover border-4 border-primary shadow-lg"
                 data-ai-hint="person portrait"
                 priority
