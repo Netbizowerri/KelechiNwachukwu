@@ -61,7 +61,7 @@ export const projects: Project[] = [
     description: "A full stack webapp for food delivery",
     image: "project-4",
     tags: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Supabase"],
-    liveUrl: "https://www.facsfood.com.ng/",
+    liveUrl: "https://beautyfuncuisine.netlify.app/",
     githubUrl: "#",
   },
   {
