@@ -34,10 +34,10 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
   {
     title: "E-commerce Platform",
-    description: "A full stack e-commerce website for a medical equipment company",
+    description: "A full stack e-commerce website for an apparel company",
     image: "project-1",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
-    liveUrl: "https://www.nextoriahealth.com/",
+    liveUrl: "https://tsamzzapparel.vercel.app/",
     githubUrl: "#",
   },
   {
