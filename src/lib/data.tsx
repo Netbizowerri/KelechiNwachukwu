@@ -33,6 +33,14 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
+    title: "Vehicle Multi-Vendor Marketplace",
+    description: "A multi-vendor marketplace for vehicles.",
+    image: "project-7",
+    tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
+    liveUrl: "https://marketmotors.vercel.app/",
+    githubUrl: "#",
+  },
+  {
     title: "E-commerce Platform",
     description: "A full stack e-commerce website for an apparel company",
     image: "project-1",
