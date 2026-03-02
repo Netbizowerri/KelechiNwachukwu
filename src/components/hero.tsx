@@ -59,7 +59,7 @@ export function Hero() {
                       variant="ghost"
                       size="icon"
                       asChild
-                      className="h-20 w-20 lg:h-16 lg:w-16 rounded-full hover:bg-primary/15 p-0 transition-transform duration-150 hover:scale-105"
+                      className="h-16 w-16 lg:h-14 lg:w-14 rounded-full hover:bg-primary/15 p-0 transition-transform duration-150 hover:scale-105"
                     >
                       <a
                         href={link.url}
@@ -68,7 +68,7 @@ export function Hero() {
                         aria-label={link.name}
                         className="flex items-center justify-center h-full w-full"
                       >
-                        <span className="h-12 w-12 lg:h-10 lg:w-10 [&_svg]:h-full [&_svg]:w-full">
+                        <span className="h-9 w-9 lg:h-8 lg:w-8 [&_svg]:h-full [&_svg]:w-full">
                           {link.icon}
                         </span>
                       </a>
