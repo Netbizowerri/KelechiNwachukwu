@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 import { Menu, Gem, User, Briefcase, GraduationCap, Mail } from "lucide-react";
 
 const navLinks = [
+  { href: "home", label: "Home" },
   { href: "about", label: "About" },
   { href: "projects", label: "Projects" },
   { href: "education", label: "Education" },
@@ -14,7 +15,16 @@ const navLinks = [
 
 function scrollToId(id: string) {
   const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (!el) return;
+
+  const headerOffset = 80; // account for sticky header height + breathing room
+  const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+  const offsetPosition = elementPosition - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
 }
 
 export function Header() {
