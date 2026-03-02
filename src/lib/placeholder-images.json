@@ -3,7 +3,7 @@
     {
       "id": "avatar",
       "description": "A portrait of Kelechi Nwachukwu.",
-      "imageUrl": "https://i.ibb.co/Z1BwqgH/Kaycee-Nwachukwu.jpg",
+      "imageUrl": "https://i.ibb.co/678hDNfC/Kaycee-Nwachukwu.jpg",
       "imageHint": "person portrait"
     },
     {
@@ -47,6 +47,18 @@
       "description": "A screenshot of the multi-service platform Quanxicuzd.",
       "imageUrl": "https://i.ibb.co/6R0HM08L/Screenshot-2025-10-23-133249.png",
       "imageHint": "business website"
+    },
+    {
+      "id": "project-8",
+      "description": "A luxury perfume e-commerce experience.",
+      "imageUrl": "https://i.ibb.co/xqFJDKFY/Screenshot-2026-03-02-191811.png",
+      "imageHint": "perfume ecommerce"
+    },
+    {
+      "id": "project-9",
+      "description": "An e-book publishing and sales platform.",
+      "imageUrl": "https://i.ibb.co/5hyvtyH5/Screenshot-2026-03-02-192747.png",
+      "imageHint": "ebook platform"
     }
   ]
 }

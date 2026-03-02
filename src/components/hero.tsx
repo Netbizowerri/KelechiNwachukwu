@@ -1,84 +1,107 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/lib/data.tsx";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Eye } from "lucide-react";
-import { useEffect, useState } from "react";
+import { MessageCircle, Sparkles } from "lucide-react";
+
+const WHATSAPP_URL =
+  "https://wa.me/2349067180824?text=Hello%20Kelechi.%20I%20just%20visited%20your%20personal%20website.%20I%20am%20interested%20in%20your%20service.";
 
 export function Hero() {
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
 
   useEffect(() => {
     const avatar = PlaceHolderImages.find((img) => img.id === "avatar");
-    if (avatar) {
-      setAvatarUrl(avatar.imageUrl);
-    }
+    if (avatar) setAvatarUrl(avatar.imageUrl);
   }, []);
 
+  const subtitle = useMemo(
+    () => "Full Stack Developer crafting resilient web apps with delightful UX. Based in Nigeria, collaborating globally.",
+    []
+  );
+
   return (
-    <section id="home" className="w-full py-24 md:py-32 lg:py-40">
+    <section id="home" className="section-padding">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-2">
-          <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
-            <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Kelechi Nwachukwu
-              </h1>
-              <h2 className="text-2xl font-semibold tracking-tight text-primary sm:text-3xl md:text-4xl">
-                Full Stack Developer & Trainer
-              </h2>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
-                A Full Stack Developer passionate about creating modern and
-                responsive web applications.
-              </p>
+        <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] items-center">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-2 text-xs font-semibold text-primary">
+              <Sparkles className="h-4 w-4" />
+              Available for remote contracts
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
-              <Button asChild size="lg">
-                <Link
-                  href="https://www.canva.com/design/DAG2nS19xtw/apftAeIRonR5dlBtAvnhyQ/view?utm_content=DAG2nS19xtw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9813edeeec"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Eye className="mr-2" />
-                  VIEW CV
-                </Link>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+              Kelechi Nwachukwu
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+              {subtitle}
+            </p>
+            <div className="flex flex-wrap gap-5 sm:gap-6">
+              <Button size="lg" className="shadow-lg shadow-primary/30" asChild>
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Chat with me
+                </a>
               </Button>
-              <div className="flex items-center gap-2 justify-center lg:justify-start">
-                {socialLinks.map((link) => (
-                  <Button
-                    key={link.name}
-                    variant="outline"
-                    size="icon"
-                    asChild
-                  >
-                    <Link
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={link.name}
+              <Button variant="outline" size="lg" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
+                Book a call
+              </Button>
+            </div>
+            
+            {/* Social Media Icons - app-like tray */}
+            <div className="w-full flex justify-center lg:justify-start mt-24 mb-14 sm:mt-14 sm:mb-12">
+              <div className="w-full max-w-xl lg:max-w-lg px-3">
+                <div className="flex items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-primary/12 via-background/70 to-accent/10 shadow-lg backdrop-blur-xl px-4 py-3">
+                  {socialLinks.map((link) => (
+                    <Button
+                      key={link.name}
+                      variant="ghost"
+                      size="icon"
+                      asChild
+                      className="h-20 w-20 lg:h-16 lg:w-16 rounded-full hover:bg-primary/15 p-0 transition-transform duration-150 hover:scale-105"
                     >
-                      {link.icon}
-                    </Link>
-                  </Button>
-                ))}
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={link.name}
+                        className="flex items-center justify-center h-full w-full"
+                      >
+                        <span className="h-12 w-12 lg:h-10 lg:w-10 [&_svg]:h-full [&_svg]:w-full">
+                          {link.icon}
+                        </span>
+                      </a>
+                    </Button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center">
-            {avatarUrl && (
-              <Image
-                src="https://i.ibb.co/bMxpHrHS/Kaycee-Nwachukwu.jpg"
-                alt="A portrait of Kelechi Nwachukwu."
-                width={350}
-                height={350}
-                className="rounded-full object-cover border-4 border-primary shadow-lg"
-                data-ai-hint="person portrait"
-                priority
-              />
-            )}
+          
+          <div className="relative flex justify-center">
+            <div className="absolute -inset-10 bg-primary/20 blur-3xl rounded-full" aria-hidden />
+            <div className="glass relative rounded-3xl overflow-hidden border border-border/60 shadow-2xl w-full max-w-lg">
+              {avatarUrl && (
+                <img
+                  src={avatarUrl}
+                  alt="A portrait of Kelechi Nwachukwu."
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent" />
+              <div className="absolute bottom-0 w-full p-6 flex items-center justify-between text-sm text-muted-foreground">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-primary">Experience</p>
+                  <p className="font-semibold text-foreground">8+ Years shipping products</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs uppercase tracking-[0.2em] text-accent">Location</p>
+                  <p className="font-semibold text-foreground">Owerri, Nigeria</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

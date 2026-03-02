@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { socialLinks } from "@/lib/data.tsx";
-import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 
 export function Footer() {
@@ -20,7 +17,7 @@ export function Footer() {
                     </address>
                 </div>
                 <p className="text-sm text-center">
-                    &copy; 2025 Kelechi Nwachukwu. All rights reserved.
+                    &copy; {year} Kelechi Nwachukwu. All rights reserved.
                 </p>
             </div>
         </footer>

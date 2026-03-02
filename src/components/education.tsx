@@ -34,15 +34,16 @@ const certificationData = [
 
 export function Education() {
   return (
-    <section id="education" className="w-full py-16 md:py-24 lg:py-32 bg-card">
+    <section id="education" className="section-padding">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-xl text-center space-y-4 mb-12">
+            <p className="text-sm uppercase tracking-[0.25em] text-primary font-semibold">Learning</p>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Education
+                Education & Certifications
             </h2>
         </div>
         <div className="grid gap-8 md:grid-cols-2">
-            <Card>
+            <Card className="glass">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3">
                         <Book className="h-6 w-6"/>
@@ -61,7 +62,7 @@ export function Education() {
                     ))}
                 </CardContent>
             </Card>
-             <Card>
+             <Card className="glass">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3">
                         <Award className="h-6 w-6"/>

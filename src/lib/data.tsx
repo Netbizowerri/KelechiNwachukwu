@@ -29,6 +29,8 @@ export const skills: Skill[] = [
   { name: "Tailwind CSS", icon: <Icons.TailwindCSS /> },
   { name: "Firebase", icon: <Icons.Firebase /> },
   { name: "Git", icon: <Icons.Git /> },
+  { name: "MySQL", icon: <Icons.MySQL /> },
+  { name: "N8N", icon: <Icons.N8N /> },
 ];
 
 export const projects: Project[] = [
@@ -86,6 +88,22 @@ export const projects: Project[] = [
     image: "project-6",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
     liveUrl: "https://www.quanxicuzd.com.ng/",
+    githubUrl: "#",
+  },
+  {
+    title: "E-commerce Platform",
+    description: "A full stack web application for a luxury perfume brand",
+    image: "project-8",
+    tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js"],
+    liveUrl: "https://sariaperfume.netlify.app/",
+    githubUrl: "#",
+  },
+  {
+    title: "E-Book Platform",
+    description: "An e-book publishing and storefront experience",
+    image: "project-9",
+    tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js"],
+    liveUrl: "https://ojogbajacobspublishers.com.ng/",
     githubUrl: "#",
   },
 ];

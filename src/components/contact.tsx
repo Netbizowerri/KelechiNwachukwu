@@ -3,7 +3,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { submitContactForm } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,8 +16,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2 } from "lucide-react";
+import { Loader2, Mail } from "lucide-react";
 import React from "react";
+import { submitContactForm } from "@/lib/contact";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -27,6 +27,8 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, { message: "Message must be at least 10 characters." }),
+  // Honeypot field - must stay empty
+  website: z.string().max(0).optional(),
 });
 
 export function Contact() {
@@ -38,6 +40,7 @@ export function Contact() {
       email: "",
       phone: "",
       message: "",
+      website: "",
     },
   });
 
@@ -45,33 +48,28 @@ export function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    const formData = new FormData();
-    Object.entries(values).forEach(([key, value]) => {
-      formData.append(key, value || "");
+    const result = await submitContactForm(values);
+
+    toast({
+      variant: result.success ? "default" : "destructive",
+      title: result.success ? "Success!" : "Error",
+      description: result.message,
     });
-    
-    const result = await submitContactForm(formData);
 
     if (result.success) {
-      toast({
-        title: "Success!",
-        description: result.message,
-      });
       form.reset();
-    } else {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: result.message,
-      });
     }
     setIsSubmitting(false);
   }
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 lg:py-32">
+    <section id="contact" className="section-padding">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-xl space-y-4 text-center">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+            <Mail className="h-4 w-4" />
+            Let's build something great
+          </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Let's Connect
           </h2>
@@ -79,8 +77,8 @@ export function Contact() {
             Looking for your company's next remote developer? I am just a chat away. Drop me a message below.
           </p>
         </div>
-        <div className="mx-auto mt-12 max-w-xl">
-          <Card>
+        <div className="mx-auto mt-10 max-w-2xl">
+          <Card className="glass">
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
             </CardHeader>
@@ -90,6 +88,14 @@ export function Contact() {
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="space-y-6"
                 >
+                  {/* Honeypot field to deter bots */}
+                  <input
+                    type="text"
+                    className="hidden"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    {...form.register("website")}
+                  />
                   <FormField
                     control={form.control}
                     name="name"

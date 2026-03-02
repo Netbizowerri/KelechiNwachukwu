@@ -13,6 +13,21 @@ export const Icons = {
         </g>
       </svg>
     ),
+    MySQL: () => (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="w-full h-full">
+        <path fill="#00618A" d="M11 13c0-4 7-7 21-7s21 3 21 7v26c0 4-7 7-21 7S11 43 11 39V13z" />
+        <path fill="#E48E00" d="M22 18h4v22h-4zm8-4h4v30h-4zm8 6h4v18h-4zm8-4h4v26h-4z" />
+      </svg>
+    ),
+    N8N: () => (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="w-full h-full">
+        <rect x="10" y="10" width="16" height="16" rx="4" fill="#ff6b6b" />
+        <rect x="38" y="10" width="16" height="16" rx="4" fill="#ff6b6b" />
+        <rect x="10" y="38" width="16" height="16" rx="4" fill="#ff6b6b" />
+        <rect x="38" y="38" width="16" height="16" rx="4" fill="#ff6b6b" />
+        <path d="M26 18h12M26 46h12M18 26v12M46 26v12" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
+      </svg>
+    ),
     NextJS: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
