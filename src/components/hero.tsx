@@ -50,8 +50,8 @@ export function Hero() {
             </div>
             
             {/* Social Media Icons - app-like tray */}
-            <div className="w-full flex justify-center lg:justify-start mt-24 mb-14 sm:mt-14 sm:mb-12">
-              <div className="w-full max-w-xl lg:max-w-lg px-3">
+            <div className="w-full flex justify-start mt-24 mb-14 sm:mt-14 sm:mb-12">
+              <div className="w-full max-w-xl lg:max-w-lg px-1">
                 <div className="flex items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-primary/12 via-background/70 to-accent/10 shadow-lg backdrop-blur-xl px-4 py-3">
                   {socialLinks.map((link) => (
                     <Button
@@ -59,7 +59,7 @@ export function Hero() {
                       variant="ghost"
                       size="icon"
                       asChild
-                      className="h-16 w-16 lg:h-14 lg:w-14 rounded-full hover:bg-primary/15 p-0 transition-transform duration-150 hover:scale-105"
+                      className="h-12 w-12 lg:h-10 lg:w-10 rounded-full hover:bg-primary/15 p-0 transition-transform duration-150 hover:scale-105"
                     >
                       <a
                         href={link.url}
@@ -68,7 +68,7 @@ export function Hero() {
                         aria-label={link.name}
                         className="flex items-center justify-center h-full w-full"
                       >
-                        <span className="h-9 w-9 lg:h-8 lg:w-8 [&_svg]:h-full [&_svg]:w-full">
+                        <span className="h-7 w-7 lg:h-6 lg:w-6 [&_svg]:h-full [&_svg]:w-full">
                           {link.icon}
                         </span>
                       </a>
