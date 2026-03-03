@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export function About() {
   const aboutMe = useMemo(
     () =>
-      "Full-stack engineer blending solid architecture with polished UI. I move fast, automate relentlessly, and obsess over clean DX so teams can ship confidently.",
+      "I'm Kelechi Nwachukwu, a passionate and results-driven Web Developer in Owerri, Imo State with strong expertise in full stack development and modern website design. As an Affordable Web Developer in Imo State, I specialize in helping startups, small businesses, and growing brands establish a powerful online presence without breaking their budget.",
     []
   );
 
@@ -18,10 +18,22 @@ export function About() {
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold">About</p>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Builder of fast, resilient, beautiful products.
+              About Kelechi - Trusted Web Developer in Owerri
             </h2>
+            <p className="text-muted-foreground md:text-lg leading-relaxed">{aboutMe}</p>
             <p className="text-muted-foreground md:text-lg leading-relaxed">
-              {aboutMe}
+              Over the years, I've worked with clients who needed:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-muted-foreground">
+              {["Business websites", "E-commerce platforms", "Real Estate Website", "Hotel Websites", "Food Delivery Websites", "Travels & Tours Websites", "Portfolio websites", "Landing pages", "Custom web applications"].map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-primary" aria-hidden />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted-foreground md:text-lg leading-relaxed">
+              My approach is simple - combine clean design, fast performance, and SEO best practices to deliver websites that not only look good but rank well on Google. If you need a Trusted Website Designer in Owerri who understands both design and development, I'm ready to help.
             </p>
           </div>
           <div className="space-y-6">

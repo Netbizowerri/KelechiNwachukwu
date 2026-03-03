@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Menu, Gem, User, Briefcase, GraduationCap, Mail } from "lucide-react";
+import { Gem } from "lucide-react";
 
 const navLinks = [
   { href: "home", label: "Home" },
@@ -63,43 +61,6 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="rounded-xl">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="bg-gradient-to-b from-background via-background/95 to-background">
-              <div className="space-y-5 p-4">
-                <div className="flex items-center gap-3 font-bold text-xl">
-                  <Gem className="h-7 w-7 text-primary" />
-                  <span>Kelechi Nwachukwu</span>
-                </div>
-                <div className="grid gap-3">
-                  {navLinks.map((link) => (
-                    <SheetClose asChild key={link.href}>
-                      <button
-                        onClick={() => scrollToId(link.href)}
-                        className="flex items-center gap-3 rounded-2xl bg-card/70 hover:bg-primary/10 border border-border/60 px-4 py-3 text-left transition-all duration-150 shadow-sm hover:shadow-md"
-                      >
-                        <span className="h-5 w-5 text-primary opacity-90">
-                          {link.href === "about" && <User className="h-5 w-5" />}
-                          {link.href === "projects" && <Briefcase className="h-5 w-5" />}
-                          {link.href === "education" && <GraduationCap className="h-5 w-5" />}
-                          {link.href === "contact" && <Mail className="h-5 w-5" />}
-                          {link.href === "home" && <Gem className="h-5 w-5" />}
-                        </span>
-                        <span className="font-semibold text-foreground">{link.label}</span>
-                      </button>
-                    </SheetClose>
-                  ))}
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
       </div>
     </header>
   );

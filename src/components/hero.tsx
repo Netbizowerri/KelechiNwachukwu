@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/lib/data.tsx";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { MessageCircle, Sparkles } from "lucide-react";
+import { Sparkles, MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL =
   "https://wa.me/2349067180824?text=Hello%20Kelechi.%20I%20just%20visited%20your%20personal%20website.%20I%20am%20interested%20in%20your%20service.";
@@ -18,7 +18,8 @@ export function Hero() {
   }, []);
 
   const subtitle = useMemo(
-    () => "Full Stack Developer crafting resilient web apps with delightful UX. Based in Nigeria, collaborating globally.",
+    () =>
+      "Hi, I'm Kelechi Nwachukwu - a professional Website Designer in Owerri and Full Stack Web Developer in Imo State helping businesses build modern, fast, and conversion-focused websites.",
     []
   );
 
@@ -27,25 +28,53 @@ export function Hero() {
       <div className="container px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-2 text-xs font-semibold text-primary">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-2 text-xs font-semibold text-primary mb-4 md:mb-2">
               <Sparkles className="h-4 w-4" />
-              Available for remote contracts
+              Affordable & Trusted Web Developer in Owerri, Imo State
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-              Kelechi Nwachukwu
+              Affordable & Trusted Web Developer in Owerri, Imo State
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
               {subtitle}
             </p>
-            <div className="flex flex-wrap gap-5 sm:gap-6">
-              <Button size="lg" className="shadow-lg shadow-primary/30" asChild>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
+              If you're looking for an Affordable Website Designer in Owerri or a Trusted Web Developer in Imo State, you're in the right place. I build responsive, SEO-optimized, and scalable websites that help brands grow online.
+            </p>
+            <div className="flex flex-wrap gap-4 sm:gap-5">
+              <Button
+                size="lg"
+                className="inline-flex md:hidden shadow-lg shadow-primary/30"
+                asChild
+              >
                 <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Chat with me
                 </a>
               </Button>
-              <Button variant="outline" size="lg" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
-                Book a call
+              <Button
+                size="lg"
+                className="hidden md:inline-flex shadow-lg shadow-primary/30"
+                onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                View My Work
+              </Button>
+              <Button
+                size="lg"
+                className="hidden md:inline-flex bg-emerald-600 hover:bg-emerald-700 text-white"
+                asChild
+              >
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                  Hire Me Today
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="hidden md:inline-flex border-foreground text-foreground"
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Get a Free Consultation
               </Button>
             </div>
             
