@@ -21,15 +21,16 @@ import React from "react";
 import { submitContactForm } from "@/lib/contact";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email." }),
-  phone: z.string().optional(),
-  message: z
-    .string()
-    .min(10, { message: "Message must be at least 10 characters." }),
-  // Honeypot field - must stay empty
-  website: z.string().max(0).optional(),
-});
+    name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+    email: z.string().email({ message: "Please enter a valid email." }),
+    whatsapp: z.string().optional(),
+    businessName: z.string().optional(),
+    servicesOffered: z.string().min(10, { message: "Please describe your services in at least 10 characters." }),
+    productsOffered: z.string().min(10, { message: "Please describe your products in at least 10 characters." }),
+    websiteFeatures: z.string().min(10, { message: "Please describe desired website features in at least 10 characters." }),
+    // Honeypot field - must stay empty
+    website: z.string().max(0).optional(),
+  });
 
 export function Contact() {
   const { toast } = useToast();
@@ -38,8 +39,11 @@ export function Contact() {
     defaultValues: {
       name: "",
       email: "",
-      phone: "",
-      message: "",
+      whatsapp: "",
+      businessName: "",
+      servicesOffered: "",
+      productsOffered: "",
+      websiteFeatures: "",
       website: "",
     },
   });
@@ -96,12 +100,12 @@ export function Contact() {
                     autoComplete="off"
                     {...form.register("website")}
                   />
-                  <FormField
+<FormField
                     control={form.control}
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel>Full Name</FormLabel>
                         <FormControl>
                           <Input placeholder="Your Name" {...field} />
                         </FormControl>
@@ -124,10 +128,10 @@ export function Contact() {
                   />
                   <FormField
                     control={form.control}
-                    name="phone"
+                    name="whatsapp"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Phone Number</FormLabel>
+                        <FormLabel>Whatsapp Line</FormLabel>
                         <FormControl>
                           <Input placeholder="Your phone number" {...field} />
                         </FormControl>
@@ -137,16 +141,63 @@ export function Contact() {
                   />
                   <FormField
                     control={form.control}
-                    name="message"
+                    name="businessName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel>Business Name</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="Your message..." {...field} />
+                          <Input placeholder="Your business name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="servicesOffered"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Services Offered</FormLabel>
+                        <FormControl>
+                          <Textarea placeholder="Describe your services..." {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="productsOffered"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Products Offered</FormLabel>
+                        <FormControl>
+                          <Textarea placeholder="Describe your products..." {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+<FormField
+                    control={form.control}
+                    name="websiteFeatures"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>What Features you want in your website</FormLabel>
+                        <FormControl>
+                          <Textarea placeholder="Describe desired website features..." {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  {/* Honeypot field to deter bots */}
+                  <input
+                    type="text"
+                    className="hidden"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    {...form.register("website")}
                   />
                   <Button type="submit" className="w-full" disabled={isSubmitting}>
                     {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}

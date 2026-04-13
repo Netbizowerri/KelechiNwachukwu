@@ -1,13 +1,14 @@
 "use client";
 
 import { useMemo } from "react";
+import { Button } from "@/components/ui/button";
 import { skills } from "@/lib/data.tsx";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function About() {
   const aboutMe = useMemo(
     () =>
-      "I'm Kelechi Nwachukwu, a passionate and results-driven Web Developer in Owerri, Imo State with strong expertise in full stack development and modern website design. As an Affordable Web Developer in Imo State, I specialize in helping startups, small businesses, and growing brands establish a powerful online presence without breaking their budget.",
+      "",
     []
   );
 
@@ -32,9 +33,14 @@ export function About() {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground md:text-lg leading-relaxed">
-              My approach is simple - combine clean design, fast performance, and SEO best practices to deliver websites that not only look good but rank well on Google. If you need a Trusted Website Designer in Owerri who understands both design and development, I'm ready to help.
-            </p>
+
+            <div className="mt-8">
+              <Button size="lg" className="bg-primary text-white hover:bg-primary-dark transition-colors">
+                <a href="#contact" target="_self" rel="noreferrer">
+                  Get Started
+                </a>
+              </Button>
+            </div>
           </div>
           <div className="space-y-6">
             <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">Toolbox</h3>

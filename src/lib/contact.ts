@@ -3,8 +3,11 @@ import { z } from "zod";
 const contactSchema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
-  phone: z.string().optional(),
-  message: z.string().min(10),
+  whatsapp: z.string().optional(),
+  businessName: z.string().optional(),
+  servicesOffered: z.string().min(10),
+  productsOffered: z.string().min(10),
+  websiteFeatures: z.string().min(10),
   website: z.string().max(0).optional(), // honeypot
 });
 
