@@ -16,7 +16,14 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2, Mail } from "lucide-react";
+import { Loader2, Mail, CheckCircle } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import React from "react";
 import { submitContactForm } from "@/lib/contact";
 
@@ -49,19 +56,21 @@ export function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [showThankYou, setShowThankYou] = React.useState(false);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     const result = await submitContactForm(values);
 
-    toast({
-      variant: result.success ? "default" : "destructive",
-      title: result.success ? "Success!" : "Error",
-      description: result.message,
-    });
-
     if (result.success) {
       form.reset();
+      setShowThankYou(true);
+    } else {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: result.message,
+      });
     }
     setIsSubmitting(false);
   }
@@ -204,11 +213,34 @@ export function Contact() {
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
-              </Form>
+                </Form>
             </CardContent>
           </Card>
         </div>
       </div>
+
+      {/* Thank You Dialog */}
+      <Dialog open={showThankYou} onOpenChange={setShowThankYou}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-green-600">
+              <CheckCircle className="h-6 w-6" />
+              Thank You!
+            </DialogTitle>
+            <DialogDescription>
+              Your message has been sent successfully. I'll get back to you shortly.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-center py-4">
+            <div className="rounded-full bg-green-100 p-4">
+              <CheckCircle className="h-12 w-12 text-green-600" />
+            </div>
+          </div>
+          <Button onClick={() => setShowThankYou(false)} className="w-full">
+            Close
+          </Button>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

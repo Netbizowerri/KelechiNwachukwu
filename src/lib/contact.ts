@@ -35,19 +35,32 @@ export async function submitContactForm(values: ContactFormValues) {
   }
 
   try {
-    const res = await fetch("https://formspree.io/f/movkogoe", {
+    // Privyr API endpoint
+    const res = await fetch("https://www.privyr.com/api/v1/incoming-leads/0vZfjMQw/e1b8tPVM", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(parsed.data),
+      body: JSON.stringify({
+        // Map form fields to Privyr expected format
+        name: parsed.data.name,
+        email: parsed.data.email,
+        phone: parsed.data.whatsapp,
+        company: parsed.data.businessName,
+        // Custom fields for Privyr
+        custom_field_1: parsed.data.servicesOffered,
+        custom_field_2: parsed.data.productsOffered,
+        custom_field_3: parsed.data.websiteFeatures,
+        // Lead source
+        lead_source: "Portfolio Contact Form",
+      }),
     });
 
     lastSubmit = now;
 
     if (res.ok) {
-      return { success: true, message: "Thanks! I'll reply shortly." };
+      return { success: true, message: "Thank you! Your message has been sent successfully." };
     }
     return { success: false, message: "Something went wrong. Please try again later." };
   } catch (error) {
