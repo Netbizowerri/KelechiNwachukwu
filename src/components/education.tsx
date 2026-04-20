@@ -42,7 +42,7 @@ export function Education() {
                 Education & Certifications
             </h2>
         </div>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="mx-auto max-w-6xl grid gap-8 md:grid-cols-2">
             <Card className="glass">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3">

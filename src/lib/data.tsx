@@ -35,6 +35,30 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
+    title: "Beauty Contest Web Application",
+    description: "A Web Application for a beauty contest for ladies",
+    image: "https://i.ibb.co/xSVHJB0K/Delight-Empowerment.jpg",
+    tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
+    liveUrl: "https://delight-empowerment.vercel.app/",
+    githubUrl: "#",
+  },
+  {
+    title: "Travels & Tours Web Application",
+    description: "A Travels & Tours Booking Web Application",
+    image: "https://i.ibb.co/5hjLBcw9/Lagos-Accra-Tours.jpg",
+    tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
+    liveUrl: "https://lagosaccratour.com/",
+    githubUrl: "#",
+  },
+  {
+    title: "E-commerce Web Application",
+    description: "An E-commerce Web Application for a ladies fashion store",
+    image: "https://i.ibb.co/tw2T4Tps/Nuhafrik-Clothings.jpg",
+    tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
+    liveUrl: "https://nuhafrik.vercel.app/",
+    githubUrl: "#",
+  },
+  {
     title: "Vehicle Multi-Vendor Marketplace",
     description: "A multi-vendor marketplace for vehicles.",
     image: "project-7",

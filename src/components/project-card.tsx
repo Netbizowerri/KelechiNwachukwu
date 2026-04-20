@@ -22,19 +22,27 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   const [description] = useState(project.description);
 
-  const imagePlaceholder = PlaceHolderImages.find(
-    (p) => p.id === project.image
-  ) as ImagePlaceholder;
+  // Check if image is a URL (external) or an ID (placeholder)
+  const isExternalUrl = project.image.startsWith('http');
+  const imagePlaceholder = !isExternalUrl ? 
+    PlaceHolderImages.find((p) => p.id === project.image) as ImagePlaceholder : 
+    undefined;
 
   return (
     <Card className="flex flex-col h-full overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1 glass">
       <div className="relative w-full aspect-video overflow-hidden">
         <img
-          src={imagePlaceholder.imageUrl}
+          src={isExternalUrl ? project.image : imagePlaceholder?.imageUrl || ''}
           alt={project.title}
           className="object-cover w-full h-full"
-          data-ai-hint={imagePlaceholder.imageHint}
+          data-ai-hint={!isExternalUrl ? imagePlaceholder?.imageHint || '' : 'external image'}
           loading="lazy"
+          onError={(e) => {
+            // Fallback to a placeholder if external image fails
+            if (isExternalUrl) {
+              e.target.src = imagePlaceholder?.imageUrl || '';
+            }
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent" />
       </div>
