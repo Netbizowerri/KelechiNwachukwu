@@ -2,6 +2,9 @@ import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 import { Icons } from "@/components/icons";
 import type { ReactNode } from "react";
 
+// Import Instagram and LekeElekee from local Icons component
+const { Instagram, LekeElekee } = Icons;
+
 export type Skill = {
   name: string;
   icon: ReactNode;
