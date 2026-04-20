@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/dialog";
 import React from "react";
 import { submitContactForm } from "@/lib/contact";
+import { socialLinks } from "@/lib/data";
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
