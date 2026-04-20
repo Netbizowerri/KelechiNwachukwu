@@ -146,6 +146,25 @@ export const Icons = {
       >
         <path fill="#264DE4" d="M3.2,0L5.4,21.1L12,24l6.6-2.9L20.8,0H3.2z M16.9,8.4H8.4L8.1,5.2h9.1L16.9,8.4z M16.3,12.7H8.6l-0.2-2.2H17L16.3,12.7z M12,19.8l-3.3-0.9L8.4,15h2.3l0.1,1.1l1.1,0.3l1.1-0.3l0.2-1.7h2.2l-0.3,3.4L12,19.8z"/>
       </svg>
+    },
+    Instagram: () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        className="w-full h-full"
+      >
+        <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" strokeWidth="2"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zm1.5-4.87h.01" fill="currentColor"/>
+      </svg>
     ),
-  };
+    LekeElekee: () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        className="w-full h-full"
+      >
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    ),
+};
     

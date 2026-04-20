@@ -212,14 +212,37 @@ export function Contact() {
                     {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
-                </form>
-                </Form>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
+                 </form>
+               </Form>
+             </CardContent>
+           </Card>
+         </div>
+       </div>
 
-      {/* Thank You Dialog */}
+       {/* Social Links Section */}
+       <div className="mx-auto mt-10 max-w-2xl space-y-4 text-center">
+         <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+           Follow Me
+         </h2>
+         <p className="text-muted-foreground">
+           Stay connected with me on social media
+         </p>
+         <div className="flex flex-wrap justify-center gap-4">
+           {socialLinks.map((link) => (
+             <a
+               key={link.name}
+               href={link.url}
+               target="_blank"
+               rel="noreferrer"
+               className="flex items-center justify-center w-12 h-12 rounded-lg border border-muted-background/50 bg-muted hover:bg-primary/10 hover:text-primary transition-colors"
+             >
+               {link.icon}
+             </a>
+           ))}
+         </div>
+       </div>
+
+       {/* Thank You Dialog */}
       <Dialog open={showThankYou} onOpenChange={setShowThankYou}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>

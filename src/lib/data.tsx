@@ -139,19 +139,29 @@ export const socialLinks = [
     icon: <Github className="h-5 w-5" />,
   },
   {
+    name: "Facebook",
+    url: "https://facebook.com/netbizowerri",
+    icon: <Facebook className="h-5 w-5" />,
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com/netbizowerri",
+    icon: <Instagram className="h-5 w-5" />,
+  },
+  {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/netbizowerri/",
     icon: <Linkedin className="h-5 w-5" />,
   },
   {
     name: "X",
-    url: "https://x.com/netbizowerri",
+    url: "https://x.com/NetBizOwerri",
     icon: <Twitter className="h-5 w-5" />,
   },
   {
-    name: "Facebook",
-    url: "https://web.facebook.com/netbizowerri",
-    icon: <Facebook className="h-5 w-5" />,
+    name: "LekeElekee",
+    url: "https://lekeelekee.com/u/Kaycee",
+    icon: <LekeElekee className="h-5 w-5" />,
   },
 ];
     
