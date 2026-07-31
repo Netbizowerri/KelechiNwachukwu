@@ -4,8 +4,20 @@ import { Reveal } from "@/components/reveal";
 
 export function Projects() {
   return (
-    <section id="projects" className="section-padding">
-      <div className="container px-4 md:px-6">
+    <section id="projects" className="section-padding relative overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.14),transparent_55%),radial-gradient(ellipse_at_bottom_left,rgba(56,189,248,0.1),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(16,185,129,0.08),transparent_45%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"
+      />
+      <div className="container relative px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center space-y-4 mb-14">
           <Reveal>
             <p className="eyebrow">Work</p>

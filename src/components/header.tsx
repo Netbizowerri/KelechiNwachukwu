@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Gem, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -68,11 +68,15 @@ export function Header() {
       <div className="container flex h-16 md:h-[72px] items-center justify-between px-4 md:px-6">
         <button
           onClick={() => scrollToId("home")}
-          className="flex items-center gap-2 font-bold text-lg md:text-xl text-foreground hover:text-primary transition-colors"
+          className="group text-xl md:text-2xl tracking-tight text-foreground"
           aria-label="Back to top"
         >
-          <Gem className="h-6 w-6 text-primary" />
-          <span>Kelechi Nwachukwu</span>
+          <span className="font-black transition-colors group-hover:text-primary">
+            Kelechi
+          </span>
+          <span className="font-bold text-primary/80 transition-colors group-hover:text-primary">
+            Nwachukwu
+          </span>
         </button>
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">

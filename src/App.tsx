@@ -7,6 +7,7 @@ import { Education } from './components/education';
 import { Pricing } from './components/pricing';
 import { Contact } from './components/contact';
 import { Footer } from './components/footer';
+import { StickyFooter } from './components/sticky-footer';
 import { Toaster } from './components/ui/toaster';
 import { ArrowUp } from 'lucide-react';
 
@@ -29,7 +30,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent text-foreground">
+    <div className="min-h-screen bg-transparent pb-28 text-foreground">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:shadow-lg"
@@ -46,13 +47,14 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <StickyFooter />
       <Toaster />
 
       {showScrollTop && (
         <button
           type="button"
           onClick={handleScrollToTop}
-          className="md:hidden fixed bottom-5 right-4 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
+          className="md:hidden fixed bottom-24 right-4 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
           aria-label="Scroll to top"
         >
           <ArrowUp className="h-5 w-5" />

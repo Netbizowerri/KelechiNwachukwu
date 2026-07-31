@@ -23,7 +23,7 @@ interface PricingTier {
     featured?: boolean;
 }
 
-const pricingTiers: PricingTier[] = [
+export const pricingTiers: PricingTier[] = [
     {
         icon: <Rocket className="h-6 w-6" />,
         name: "Landing Page",
