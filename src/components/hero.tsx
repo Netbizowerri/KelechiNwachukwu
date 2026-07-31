@@ -95,7 +95,7 @@ export function Hero() {
               {subtitle}
             </p>
             <p className="animate-fade-up text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed" style={{ animationDelay: "240ms" }}>
-              If you're looking for an affordable website designer in Nigeria or a trusted web app developer who builds for clients nationwide, you're in the right place. Based in Owerri, I craft responsive, SEO-optimised websites and web applications that help Nigerian brands grow online — from Lagos and Abuja to Port Harcourt and beyond.
+              Based in Owerri, I craft responsive, SEO-optimised websites and web applications that help Nigerian brands grow online.
             </p>
             <div className="animate-fade-up flex flex-wrap gap-4 sm:gap-5" style={{ animationDelay: "320ms" }}>
               <Button
