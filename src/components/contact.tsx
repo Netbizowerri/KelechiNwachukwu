@@ -27,6 +27,7 @@ import {
 import React from "react";
 import { submitContactForm } from "@/lib/contact";
 import { socialLinks } from "@/lib/data";
+import { Reveal } from "@/components/reveal";
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -80,17 +81,20 @@ export function Contact() {
     <section id="contact" className="section-padding">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-xl space-y-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-            <Mail className="h-4 w-4" />
-            Let's build something great
-          </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Let's Connect
-          </h2>
-          <p className="text-muted-foreground">
-            Looking for your company's next remote developer? I am just a chat away. Drop me a message below.
-          </p>
+          <Reveal>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+              <Mail className="h-4 w-4" />
+              Let's build something great
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl leading-[1.1] text-balance">
+              Let's Connect
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Looking for your company's next remote developer? I am just a chat away. Drop me a message below.
+            </p>
+          </Reveal>
         </div>
+        <Reveal delay={120}>
         <div className="mx-auto mt-10 max-w-2xl">
           <Card className="glass">
             <CardHeader>
@@ -215,9 +219,10 @@ export function Contact() {
                   </Button>
                  </form>
                </Form>
-             </CardContent>
-           </Card>
-         </div>
+              </CardContent>
+            </Card>
+          </div>
+        </Reveal>
        </div>
 
        {/* Social Links Section */}

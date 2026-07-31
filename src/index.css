@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/geist-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/geist-mono-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: 235 23% 10%;
+  --background: 222 24% 7%;
   --foreground: 0 0% 96%;
-  --card: 235 18% 14%;
+  --card: 221 20% 11%;
   --card-foreground: 0 0% 98%;
-  --popover: 235 18% 12%;
+  --popover: 221 22% 9%;
   --popover-foreground: 0 0% 98%;
-  --primary: 262 83% 68%;
-  --primary-foreground: 0 0% 12%;
-  --secondary: 228 17% 18%;
+  --primary: 160 78% 42%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 222 18% 13%;
   --secondary-foreground: 0 0% 96%;
-  --muted: 228 14% 20%;
-  --muted-foreground: 220 10% 70%;
-  --accent: 190 89% 55%;
+  --muted: 222 16% 15%;
+  --muted-foreground: 217 12% 66%;
+  --accent: 160 68% 52%;
   --accent-foreground: 0 0% 10%;
   --destructive: 0 62.8% 50%;
   --destructive-foreground: 0 0% 98%;
-  --border: 228 15% 24%;
-  --input: 228 15% 22%;
-  --ring: 262 83% 68%;
+  --border: 222 18% 18%;
+  --input: 222 18% 16%;
+  --ring: 160 78% 42%;
   --chart-1: 220 70% 50%;
   --chart-2: 160 60% 45%;
   --chart-3: 30 80% 55%;
@@ -36,25 +52,92 @@ html {
 }
 
 body {
-  background: radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.12), transparent 35%),
-    radial-gradient(circle at 80% 0%, rgba(34, 211, 238, 0.12), transparent 30%),
-    radial-gradient(circle at 50% 80%, rgba(99, 102, 241, 0.14), transparent 35%),
+  background:
+    radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.1), transparent 32%),
+    radial-gradient(circle at 85% 0%, rgba(56, 189, 248, 0.05), transparent 28%),
+    radial-gradient(circle at 60% 85%, rgba(16, 185, 129, 0.07), transparent 34%),
     hsl(var(--background));
   color: hsl(var(--foreground));
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv01', 'cv03', 'cv09';
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-card/80 backdrop-blur-xl border border-border/60 shadow-2xl;
+    @apply bg-card/80 backdrop-blur-xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_24px_60px_-24px_rgba(2,6,23,0.9)];
   }
   .section-padding {
     @apply py-16 md:py-24 lg:py-28;
+  }
+  .font-mono-ui {
+    font-family: 'Geist Mono', ui-monospace, monospace;
+  }
+  .eyebrow {
+    @apply font-mono-ui text-[11px] uppercase tracking-[0.2em] text-primary font-medium;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease-out both;
+}
+
+.animate-float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-float-soft {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }

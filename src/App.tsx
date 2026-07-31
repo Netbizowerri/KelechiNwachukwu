@@ -4,6 +4,7 @@ import { Hero } from './components/hero';
 import { About } from './components/about';
 import { Projects } from './components/projects';
 import { Education } from './components/education';
+import { Pricing } from './components/pricing';
 import { Contact } from './components/contact';
 import { Footer } from './components/footer';
 import { Toaster } from './components/ui/toaster';
@@ -29,12 +30,19 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-transparent text-foreground">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:shadow-lg"
+      >
+        Skip to content
+      </a>
       <Header />
-      <main className="relative overflow-hidden">
+      <main id="main" className="relative overflow-hidden">
         <Hero />
         <About />
         <Projects />
         <Education />
+        <Pricing />
         <Contact />
       </main>
       <Footer />

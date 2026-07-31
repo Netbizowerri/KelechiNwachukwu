@@ -1,0 +1,13 @@
+# Kelechi Nwachukwu — Website & Web App Developer
+> Custom websites and web applications for businesses across Nigeria. Responsive, SEO-optimised and scalable builds, delivered nationwide from Owerri, Imo State.
+
+## Key Pages
+- [Home — Portfolio](https://kelechi-nwachukwu.vercel.app/): Portfolio of website and web app projects across e-commerce, real estate, travel, food delivery and finance.
+- [Projects](https://kelechi-nwachukwu.vercel.app/#projects): Recent platforms shipped across commerce, mobility, finance and non-profit sectors.
+- [About](https://kelechi-nwachukwu.vercel.app/#about): Experience, toolbox and the services I offer — business websites, e-commerce platforms, custom web applications and more.
+- [Education & Certifications](https://kelechi-nwachukwu.vercel.app/#education): Formal education and online certifications in web development and e-business.
+- [Contact](https://kelechi-nwachukwu.vercel.app/#contact): Start a project or request a quote for website and web app development.
+
+## About the Author
+- Kelechi Nwachukwu: Website & web app developer with 8+ years of experience shipping products for businesses in Nigeria. Based in Owerri, Imo State, serving clients nationwide.
+- Contact: https://wa.me/2349067180824

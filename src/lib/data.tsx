@@ -39,7 +39,7 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
   {
     title: "Beauty Contest Web Application",
-    description: "A Web Application for a beauty contest for ladies",
+    description: "A custom web application for a ladies' beauty contest, with contestant profiles, gallery voting and real-time results.",
     image: "https://i.ibb.co/xSVHJB0K/Delight-Empowerment.jpg",
     tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
     liveUrl: "https://delight-empowerment.vercel.app/",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   },
   {
     title: "Travels & Tours Web Application",
-    description: "A Travels & Tours Booking Web Application",
+    description: "A travel and tours booking web application with trip packages, itineraries and online reservations.",
     image: "https://i.ibb.co/5hjLBcw9/Lagos-Accra-Tours.jpg",
     tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
     liveUrl: "https://lagosaccratour.com/",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
   },
   {
     title: "E-commerce Web Application",
-    description: "An E-commerce Web Application for a ladies fashion store",
+    description: "An e-commerce web application for a ladies' fashion store with product catalog, cart and checkout.",
     image: "https://i.ibb.co/tw2T4Tps/Nuhafrik-Clothings.jpg",
     tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
     liveUrl: "https://nuhafrik.vercel.app/",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
   },
   {
     title: "Vehicle Multi-Vendor Marketplace",
-    description: "A multi-vendor marketplace for vehicles.",
+    description: "A multi-vendor marketplace where dealers list vehicles and buyers browse, compare and enquire about cars online.",
     image: "project-7",
     tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
     liveUrl: "https://marketmotors.vercel.app/",
@@ -71,23 +71,23 @@ export const projects: Project[] = [
   },
   {
     title: "E-commerce Platform",
-    description: "A full stack e-commerce website for an apparel company",
+    description: "A full-stack e-commerce website for an apparel company, including product management and secure checkout.",
     image: "project-1",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
     liveUrl: "https://tsamzzapparel.vercel.app/",
     githubUrl: "#",
   },
   {
-    title: "Loans & Investment Platform",
-    description: "A full stack webapp for loans and investments.",
-    image: "project-2",
+    title: "Blogging Platform",
+    description: "A full-stack blog website for publishing, editing and managing articles with a rich-text editor and a secure content dashboard — ideal for news portals, magazines and content creators who need a fast, SEO-ready blog web application.",
+    image: "https://i.ibb.co/97nFsfZ/Screenshot-2026-07-31-125214.png",
     tags: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
-    liveUrl: "https://www.iprofitservices.com.ng/",
+    liveUrl: "https://thenationseyes.vercel.app/",
     githubUrl: "#",
   },
   {
     title: "Real Estate Platform",
-    description: "A full stack webapp for property listings",
+    description: "A full-stack web app for property listings with searchable listings and detailed property pages.",
     image: "project-3",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
     liveUrl: "https://northerncrest.vercel.app/",
@@ -95,7 +95,7 @@ export const projects: Project[] = [
   },
   {
     title: "Food Delivery Platform",
-    description: "A full stack webapp for food delivery",
+    description: "A full-stack web app for food delivery with restaurant menus, online ordering and order tracking.",
     image: "project-4",
     tags: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Supabase"],
     liveUrl: "https://beautyfuncuisine.netlify.app/",
@@ -103,7 +103,7 @@ export const projects: Project[] = [
   },
   {
     title: "Non Profit Platform",
-    description: "A webapp for an NGO based in Nigeria",
+    description: "A web app for an NGO based in Nigeria with donation and volunteer features.",
     image: "project-5",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
     liveUrl: "https://lodestarcare.vercel.app/",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
   },
   {
     title: "Multi-Services Platform",
-    description: "A webapp for a multi-service business",
+    description: "A web app for a multi-service business connecting customers to services online.",
     image: "project-6",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
     liveUrl: "https://www.quanxicuzd.com.ng/",
@@ -119,7 +119,7 @@ export const projects: Project[] = [
   },
   {
     title: "E-commerce Platform",
-    description: "A full stack web application for a luxury perfume brand",
+    description: "A full-stack web application for a luxury perfume brand with product showcase and checkout.",
     image: "project-8",
     tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js"],
     liveUrl: "https://sariaperfume.netlify.app/",
@@ -127,7 +127,7 @@ export const projects: Project[] = [
   },
   {
     title: "E-Book Platform",
-    description: "An e-book publishing and storefront experience",
+    description: "An e-book publishing and storefront platform for authors to publish and sell books online.",
     image: "project-9",
     tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js"],
     liveUrl: "https://ojogbajacobspublishers.com.ng/",

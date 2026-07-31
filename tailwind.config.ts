@@ -9,9 +9,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        body: ['Geist', 'system-ui', 'sans-serif'],
+        headline: ['Geist', 'system-ui', 'sans-serif'],
+        code: ['Geist Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -87,10 +87,39 @@ export default {
             height: '0',
           },
         },
+        'fade-up': {
+          from: {
+            opacity: '0',
+            transform: 'translateY(24px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+        'fade-in': {
+          from: {
+            opacity: '0',
+          },
+          to: {
+            opacity: '1',
+          },
+        },
+        'float-soft': {
+          '0%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '50%': {
+            transform: 'translateY(-8px)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-up': 'fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both',
+        'fade-in': 'fade-in 0.7s ease-out both',
+        'float-soft': 'float-soft 6s ease-in-out infinite',
       },
     },
   },

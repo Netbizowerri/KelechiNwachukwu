@@ -1,0 +1,26 @@
+# https://kelechi-nwachukwu.vercel.app/robots.txt
+# AI search crawlers are allowed so content can be retrieved and cited by AI engines.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Standard search crawlers
+User-agent: *
+Allow: /
+
+Sitemap: https://kelechi-nwachukwu.vercel.app/sitemap.xml
