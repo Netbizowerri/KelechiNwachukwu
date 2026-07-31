@@ -88,7 +88,7 @@ export function Hero() {
               <Sparkles className="h-4 w-4" />
               Website & Web App Developer — Serving Clients Across Nigeria
             </div>
-            <h1 className="animate-fade-up text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight text-balance" style={{ animationDelay: "80ms" }}>
+            <h1 className="animate-fade-up text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight text-balance" style={{ animationDelay: "80ms" }}>
               See Your Website/Application Design Before Making Payments!
             </h1>
             <p className="animate-fade-up text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed" style={{ animationDelay: "160ms" }}>
