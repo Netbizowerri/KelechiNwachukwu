@@ -76,6 +76,7 @@ export const pricingTiers: PricingTier[] = [
         footnote: "Need multi-user role access? Pricing is determined by project scope.",
         samples: [
             { label: "Alpha Davis Real Estate", url: "https://alphadavisrealestate.com" },
+            { label: "Famous Suites Hotel", url: "https://famoussuiteshotel.com.ng/" },
         ],
     },
     {
@@ -107,6 +108,7 @@ export const pricingTiers: PricingTier[] = [
         samples: [
             { label: "Bulk Cell", url: "https://bulkcell.com.ng" },
             { label: "Saria Perfume", url: "https://sariaperfume.com" },
+            { label: "Chixat Hair", url: "https://chixathair.com/" },
         ],
         featured: true,
     },
