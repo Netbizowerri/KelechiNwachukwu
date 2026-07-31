@@ -250,8 +250,15 @@ function BookDialog() {
 }
 
 function PricingDialog() {
+  const [open, setOpen] = useState(false);
+
+  function handleGetStarted() {
+    setOpen(false);
+    setTimeout(() => scrollToId("contact"), 200);
+  }
+
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger className={tabClass(false)}>
         <Tag className="h-5 w-5" />
         <span className="text-[10px] font-medium">Pricing</span>
@@ -336,7 +343,10 @@ function PricingDialog() {
 
           <a
             href="#contact"
-            onClick={() => scrollToId("contact")}
+            onClick={(e) => {
+              e.preventDefault();
+              handleGetStarted();
+            }}
             className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-lg bg-primary text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 active:scale-[0.99]"
           >
             Get Started
