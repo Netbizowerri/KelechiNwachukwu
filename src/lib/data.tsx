@@ -62,7 +62,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "Vehicle Multi-Vendor Marketplace",
+    title: "Multi-Vendor Marketplace Web Application",
     description: "A multi-vendor marketplace where dealers list vehicles and buyers browse, compare and enquire about cars online.",
     image: "project-7",
     tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "E-commerce Platform",
+    title: "E-commerce Web Application",
     description: "A full-stack e-commerce website for an apparel company, including product management and secure checkout.",
     image: "project-1",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "Blogging Platform",
+    title: "Blogging Web Application",
     description: "A full-stack blog website for publishing, editing and managing articles with a rich-text editor and a secure content dashboard — ideal for news portals, magazines and content creators who need a fast, SEO-ready blog web application.",
     image: "https://i.ibb.co/97nFsfZ/Screenshot-2026-07-31-125214.png",
     tags: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "Real Estate Platform",
+    title: "Real Estate Web Application",
     description: "A full-stack web app for property listings with searchable listings and detailed property pages.",
     image: "project-3",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "Food Delivery Platform",
+    title: "Food Delivery Web Application",
     description: "A full-stack web app for food delivery with restaurant menus, online ordering and order tracking.",
     image: "project-4",
     tags: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Supabase"],
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "Non Profit Platform",
+    title: "Non Profit Website",
     description: "A web app for an NGO based in Nigeria with donation and volunteer features.",
     image: "project-5",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "Multi-Services Platform",
+    title: "Multi Service Website",
     description: "A web app for a multi-service business connecting customers to services online.",
     image: "project-6",
     tags: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "E-commerce Platform",
+    title: "E-commerce Web Application",
     description: "A full-stack web application for a luxury perfume brand with product showcase and checkout.",
     image: "project-8",
     tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js"],
@@ -126,11 +126,35 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "E-Book Platform",
+    title: "E-Book Web Application",
     description: "An e-book publishing and storefront platform for authors to publish and sell books online.",
     image: "project-9",
     tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js"],
     liveUrl: "https://ojogbajacobspublishers.com.ng/",
+    githubUrl: "#",
+  },
+  {
+    title: "Hotel Booking Web Application",
+    description: "A hotel booking and management system with invoicing.",
+    image: "https://i.ibb.co/LX7kXcJX/Kelechi-Nwachukwu-1.jpg",
+    tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
+    liveUrl: "https://famous-suites-hotel.vercel.app/",
+    githubUrl: "#",
+  },
+  {
+    title: "Invoicing & Income Web Application",
+    description: "A web application for generating invoices and revenue accounting.",
+    image: "https://i.ibb.co/Ld3D2R6X/Kelechi-Nwachukwu-2.jpg",
+    tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
+    liveUrl: "https://webdevinvoice.vercel.app/",
+    githubUrl: "#",
+  },
+  {
+    title: "Lead Scraper Web Application",
+    description: "LeadFlow Nigeria is the autonomous lead scraper that finds physical Nigerian businesses with no website — then prepares them for your custom web design pitch. Powered by Gemini AI.",
+    image: "https://i.ibb.co/TDrVM3y6/Kelechi-Nwachukwu.jpg",
+    tags: ["React.js", "Vite", "TypeScript", "Node.js", "Tailwind CSS"],
+    liveUrl: "https://leadflow-nigeria.vercel.app/",
     githubUrl: "#",
   },
 ];
