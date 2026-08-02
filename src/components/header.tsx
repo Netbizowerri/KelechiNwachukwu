@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useBookService } from "@/components/book-service";
 
 const navLinks = [
   { href: "home", label: "Home" },
@@ -30,6 +31,7 @@ function scrollToId(id: string) {
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeId, setActiveId] = useState("home");
+  const { openBookService } = useBookService();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -99,7 +101,7 @@ export function Header() {
         <Button
           size="sm"
           className="shadow-lg shadow-primary/20 active:scale-[0.98]"
-          onClick={() => scrollToId("contact")}
+          onClick={() => openBookService()}
         >
           <MessageCircle className="mr-1.5 h-4 w-4" />
           Get Started

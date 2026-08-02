@@ -9,6 +9,7 @@ import { Contact } from './components/contact';
 import { Footer } from './components/footer';
 import { StickyFooter } from './components/sticky-footer';
 import { Toaster } from './components/ui/toaster';
+import { BookServiceProvider } from './components/book-service';
 import { ArrowUp } from 'lucide-react';
 
 export default function App() {
@@ -30,7 +31,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent pb-28 text-foreground">
+    <BookServiceProvider>
+      <div className="min-h-screen bg-transparent pb-28 text-foreground">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:shadow-lg"
@@ -60,6 +62,7 @@ export default function App() {
           <ArrowUp className="h-5 w-5" />
         </button>
       )}
-    </div>
+      </div>
+    </BookServiceProvider>
   );
 }

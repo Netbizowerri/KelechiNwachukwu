@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 import { skills } from "@/lib/data.tsx";
 import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "@/components/reveal";
+import { useBookService } from "@/components/book-service";
 
 export function About() {
+  const { openBookService } = useBookService();
   const aboutMe = useMemo(
     () =>
       "Kelechi Nwachukwu is a website and web app developer in Nigeria with 8+ years of experience building digital products for businesses across the country. I design and develop custom websites, e-commerce platforms, and web applications that are responsive, fast, and built to rank on Google — whether you're a startup in Lagos, a retailer in Abuja, or a growing brand in Owerri. My work covers business websites, e-commerce stores, real estate portals, hotel booking sites, food delivery apps, travel and tours platforms, and bespoke web applications.",
@@ -43,10 +45,8 @@ export function About() {
 
             <Reveal delay={200}>
               <div className="mt-8">
-                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 transition-colors active:scale-[0.98]">
-                  <a href="#contact" target="_self" rel="noreferrer">
-                    Get Started
-                  </a>
+                <Button size="lg" className="bg-primary text-white hover:bg-primary/90 transition-colors active:scale-[0.98]" onClick={() => openBookService()}>
+                  Get Started
                 </Button>
               </div>
             </Reveal>

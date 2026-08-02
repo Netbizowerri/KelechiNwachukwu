@@ -1,6 +1,7 @@
 import { Rocket, Layers, Database, ShoppingCart, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "@/components/reveal";
+import { useBookService } from "@/components/book-service";
 
 interface PriceLine {
     amount: string;
@@ -115,6 +116,7 @@ export const pricingTiers: PricingTier[] = [
 ];
 
 export function Pricing() {
+    const { openBookService } = useBookService();
     return (
         <section id="pricing" className="section-padding">
             <div className="container px-4 md:px-6">
@@ -205,16 +207,17 @@ export function Pricing() {
                                         </div>
                                     </div>
 
-                                    <a
-                                        href="#contact"
-                                        className={`mt-auto inline-flex h-10 items-center justify-center rounded-lg text-sm font-semibold transition-all active:scale-[0.98] ${
+                                    <button
+                                        type="button"
+                                        onClick={() => openBookService(tier.name)}
+                                        className={`mt-auto inline-flex h-10 w-full items-center justify-center rounded-lg text-sm font-semibold transition-all active:scale-[0.98] ${
                                             tier.featured
                                                 ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90"
                                                 : "border border-primary/30 text-primary hover:bg-primary/10"
                                         }`}
                                     >
                                         Get Started
-                                    </a>
+                                    </button>
                                 </CardContent>
                             </Card>
                         </Reveal>

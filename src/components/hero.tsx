@@ -6,10 +6,12 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Sparkles, MessageCircle, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
+import { useBookService } from "@/components/book-service";
 
 export function Hero() {
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const { openBookService } = useBookService();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -101,12 +103,10 @@ export function Hero() {
               <Button
                 size="lg"
                 className="inline-flex md:hidden shadow-lg shadow-primary/20 active:scale-[0.98]"
-                asChild
+                onClick={() => openBookService()}
               >
-                <a href="#contact" target="_self" rel="noreferrer">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Get Started
-                </a>
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Get Started
               </Button>
               <Button
                 size="lg"
@@ -132,11 +132,9 @@ export function Hero() {
               <Button
                 size="lg"
                 className="hidden md:inline-flex bg-emerald-600 hover:bg-emerald-500 text-white active:scale-[0.98]"
-                asChild
+                onClick={() => openBookService()}
               >
-                <a href="#contact" target="_self" rel="noreferrer">
-                  Get Started
-                </a>
+                Get Started
               </Button>
             </div>
           </div>
