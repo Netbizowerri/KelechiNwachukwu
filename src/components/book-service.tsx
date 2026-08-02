@@ -42,6 +42,10 @@ function formatPrices(service: string): string {
     .join(", ");
 }
 
+function priceOptionString(rowLabel: string | undefined, amount: string, note: string): string {
+  return rowLabel ? `${rowLabel} — ${amount} (${note})` : `${amount} (${note})`;
+}
+
 interface BookDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -55,6 +59,7 @@ function BookDialog({ open, onOpenChange, presetService }: BookDialogProps) {
   const [startDate, setStartDate] = useState("");
   const [details, setDetails] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [selectedPrice, setSelectedPrice] = useState("");
 
   useEffect(() => {
     if (open) {
@@ -63,9 +68,14 @@ function BookDialog({ open, onOpenChange, presetService }: BookDialogProps) {
       setStartDate("");
       setDetails("");
       setSubmitted(false);
+      setSelectedPrice("");
       setService(presetService ?? "");
     }
   }, [open, presetService]);
+
+  useEffect(() => {
+    setSelectedPrice("");
+  }, [service]);
 
   const selectedTier = pricingTiers.find((t) => t.name === service);
 
@@ -75,7 +85,11 @@ function BookDialog({ open, onOpenChange, presetService }: BookDialogProps) {
     const message =
       `Hello Kelechi! I'd like to book a project.%0A%0A` +
       `Service: ${service}%0A` +
-      (prices ? `Price range: ${prices}%0A` : "") +
+      (selectedPrice
+        ? `Selected package: ${selectedPrice}%0A`
+        : prices
+        ? `Price range: ${prices}%0A`
+        : "") +
       `Name: ${name}%0A` +
       `WhatsApp: ${whatsapp}%0A` +
       (startDate ? `Preferred start: ${startDate}%0A` : "") +
@@ -133,9 +147,12 @@ function BookDialog({ open, onOpenChange, presetService }: BookDialogProps) {
 
             {selectedTier ? (
               <div className="space-y-2 rounded-lg border border-primary/20 bg-primary/5 p-3">
-                <p className="text-[11px] font-medium uppercase tracking-wide text-accent">
-                  Pricing
-                </p>
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-[11px] font-medium uppercase tracking-wide text-accent">
+                    Pricing
+                  </p>
+                  <p className="text-[11px] text-muted-foreground">Tap a package to add its cost</p>
+                </div>
                 <div className="space-y-2">
                   {selectedTier.prices.map((row, i) => (
                     <div key={i}>
@@ -143,17 +160,33 @@ function BookDialog({ open, onOpenChange, presetService }: BookDialogProps) {
                         <p className="mb-1 text-xs font-semibold text-foreground/85">{row.label}</p>
                       )}
                       <div className="space-y-1.5">
-                        {row.lines.map((line, j) => (
-                          <div
-                            key={j}
-                            className="flex items-baseline justify-between gap-2 rounded-md border border-white/5 bg-white/[0.02] px-3 py-2"
-                          >
-                            <span className="text-base font-bold tracking-tight text-primary">
-                              {line.amount}
-                            </span>
-                            <span className="text-right text-xs text-muted-foreground">{line.note}</span>
-                          </div>
-                        ))}
+                        {row.lines.map((line, j) => {
+                          const option = priceOptionString(row.label, line.amount, line.note);
+                          const selected = selectedPrice === option;
+                          return (
+                            <button
+                              type="button"
+                              key={`${option}-${j}`}
+                              onClick={() =>
+                                setSelectedPrice((prev) => (prev === option ? "" : option))
+                              }
+                              aria-pressed={selected}
+                              className={`flex w-full items-baseline justify-between gap-2 rounded-md border px-3 py-2 text-left transition-all active:scale-[0.99] ${
+                                selected
+                                  ? "border-primary/60 bg-primary/10 shadow-[0_0_0_1px_rgba(16,185,129,0.3)]"
+                                  : "border-white/5 bg-white/[0.02] hover:border-primary/40 hover:bg-white/[0.04]"
+                              }`}
+                            >
+                              <span className="flex items-center gap-2">
+                                {selected && <Check className="h-4 w-4 shrink-0 text-primary" />}
+                                <span className="text-base font-bold tracking-tight text-primary">
+                                  {line.amount}
+                                </span>
+                              </span>
+                              <span className="text-right text-xs text-muted-foreground">{line.note}</span>
+                            </button>
+                          );
+                        })}
                       </div>
                     </div>
                   ))}
