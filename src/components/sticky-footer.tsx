@@ -80,6 +80,11 @@ const terms: { title: string; body: string; divider?: boolean }[] = [
     body: "Your business information, project data and credentials are kept confidential and used only to complete your project. They are never shared with third parties.",
   },
   {
+    title: "Returning Clients",
+    divider: true,
+    body: "1. Returning clients will be expected to first make a payment before we create the demo. So for returning clients, a first payment of 50% of the project cost will be expected before project is commenced.\n\n2. After demo is submitted, all needed changes will be carried out. Clients will be expected to go through the website and make highlights of needed changes they require sitewide. These changes will be carried out.\n\n3. After re-submission, if the demo is good to go, a balance payment will be required before website is taken live.",
+  },
+  {
     title: "Privacy Policy",
     divider: true,
     body: "This privacy policy explains how Kelechi Nwachukwu collects, uses, protects and handles your information when you use this website, book a project, or communicate with us.",
