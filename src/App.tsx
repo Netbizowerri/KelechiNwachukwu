@@ -10,6 +10,7 @@ import { Footer } from './components/footer';
 import { StickyFooter } from './components/sticky-footer';
 import { Toaster } from './components/ui/toaster';
 import { BookServiceProvider } from './components/book-service';
+import { PromoPopout } from './components/promo-popout';
 import { ArrowUp } from 'lucide-react';
 
 export default function App() {
@@ -51,6 +52,7 @@ export default function App() {
       <Footer />
       <StickyFooter />
       <Toaster />
+      <PromoPopout />
 
       {showScrollTop && (
         <button
